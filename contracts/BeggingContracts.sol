@@ -129,12 +129,12 @@ contract BeggingContract {
         for (uint256 i = 0; i < 3; i++) {
             if (newAmount > topDonations[i]) {
                 // 腾出位置：将后面的元素后移一位
-                if (i == 0 && topDonations[1] > 0) {
+                if (i == 0) {
                     topDonations[2] = topDonations[1];
                     topDonors[2] = topDonors[1];
                     topDonations[1] = topDonations[0];
                     topDonors[1] = topDonors[0];
-                } else if (i == 1 && topDonations[2] > 0) {
+                } else if (i == 1) {
                     topDonations[2] = topDonations[1];
                     topDonors[2] = topDonors[1];
                 }
